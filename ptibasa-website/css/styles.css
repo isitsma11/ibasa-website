@@ -10858,7 +10858,91 @@ p {
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   margin-bottom: 4rem;
 }
+.about-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: white;
+}
 
+.about-section .section-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about-section .section-title span {
+  color: #f4b400; /* yellow-orange */
+}
+
+.about-section .section-subtitle {
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  padding: 30px;
+  width: 280px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.card p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.card a {
+  font-size: 13px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.card .icon {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 24px;
+  opacity: 0.2;
+}
+
+.card.active {
+  background-color: #f4b400;
+  color: white;
+}
+
+.card.active h3,
+.card.active p,
+.card.active a {
+  color: white;
+}
+
+.card.active .icon {
+  opacity: 0.3;
+}
 @media (min-width: 768px) {
   section {
     padding: 9rem 0;
@@ -10953,7 +11037,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/skycraper-5310313_1280.jpg");
+  background-image: url("../assets/img/construction\ worker\ pict.jpg"); 
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
