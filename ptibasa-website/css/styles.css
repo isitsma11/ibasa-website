@@ -40,28 +40,33 @@ body, html {
   font-weight: bold;
 }
 
+/* Container that holds the dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown menu */
 .dropdown-menu {
-  display: none; /* <-- force hidden initially */
+  display: none;
   position: absolute;
-  top: 100%;
+  top: 100%; /* positions it below the button */
   left: 0;
   background-color: rgba(255, 255, 255, 0.95);
   padding: 10px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  min-width: 200px;
+  min-width: 220px;
   z-index: 999;
 }
 
-
-.rotate {
-  display: inline-block;
-  transform: rotate(180deg);
-  transition: transform 0.3s ease;
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 .dropdown-menu li {
+  padding: 10px 20px;
   display: block;
-  padding: 5px 20px;
+  white-space: nowrap;
 }
 
 .dropdown-menu li a {
@@ -74,9 +79,8 @@ body, html {
   background-color: #f0f0f0;
 }
 
-
 .hero {
-  background-image: url('data:asset/ldpf.png');
+  background-image: url('../asset/ldpf.png');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -324,7 +328,7 @@ body, html {
 }
 
 .portfolio-video-section {
-  background: url('data:asset/ldpf.png') center center no-repeat;
+  background: url('../asset/BGVideo.png') center center no-repeat;
   background-size: cover;
   padding: 100px 20px;
   position: relative;
