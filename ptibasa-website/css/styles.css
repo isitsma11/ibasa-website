@@ -79,17 +79,36 @@ body, html {
   background-color: #f0f0f0;
 }
 
+#dropdownArrowService {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  color:#ffcc00; /* Make it yellow as you asked */
+}
+
+#dropdownArrowService.rotate {
+  transform: rotate(180deg);
+}
+
+#dropdownArrowHalaman {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  color:#ffcc00; /* Make it yellow as you asked */
+}
+
+#dropdownArrowHalaman.rotate {
+  transform: rotate(180deg);
+}
+
 .hero {
   background-image: url('../asset/ldpf.png');
+  height: 100vh;
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  position: relative;
-  color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: center;       /* ⬅️ ini buat vertikal tengah */
+  justify-content: flex-start; /* ⬅️ tetap kiri */
+  padding-left: 100px;        /* ⬅️ jaga jarak dari kiri */
+  color: white;
 }
 
 .hero::after {
@@ -106,8 +125,38 @@ body, html {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 600px;
 }
+
+.hero-content h1 {
+  font-size: 70px !important;
+  font-weight: bold;
+  white-space: nowrap;   /* ⬅️ Biar nggak pindah baris */
+  margin-bottom: 10px;
+}
+
+.company-profile {
+  color: #fdd835;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #fdd835;
+  color: #1c1c1c;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+}
+
 
 .company-profile {
   color: #ffcc00;
@@ -122,6 +171,7 @@ body, html {
 
 .tagline {
   font-style: italic;
+  font-size: 15px;
   margin-bottom: 25px;
 }
 
@@ -270,6 +320,135 @@ body, html {
   margin-bottom: 20px;
 }
 
+.company-section {
+  position: relative;
+  padding: 80px 20px;
+  background-image: url('ptibasa-website/asset/p3.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  overflow: hidden;
+}
+
+.company-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  z-index: 2;
+  position: relative;
+}
+
+/* Card Base */
+.card {
+  flex: 1 1 500px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.company-left {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+.company-right {
+  background-color: rgba(0, 0, 0, 0.6); /* transparan gelap */
+  color: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Styling content */
+.card h2,
+.card h3 {
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+.card p,
+.card ul {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.card ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.card li {
+  margin-bottom: 10px;
+}
+
+.more-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.more-btn:hover {
+  background-color: #e6b800;
+}
+
+.hero-banner {
+  background-color: #3b3b3b;
+  padding: 40px 0;
+  color: white;
+}
+
+.hero-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  box-sizing: border-box;
+}
+
+.hero-left h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.hero-left p {
+  margin: 0;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.hero-button {
+  background-color: #fcd83d;
+  color: black;
+  font-weight: bold;
+  padding: 15px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hero-button:hover {
+  background-color: #e6c937;
+}
+
+
 .legalitas-section {
   padding: 80px 20px;
   background: #fff;
@@ -330,14 +509,14 @@ body, html {
 .portfolio-video-section {
   background: url('../asset/BGVideo.png') center center no-repeat;
   background-size: cover;
-  padding: 100px 20px;
+  padding: 80px 20px;
   position: relative;
   text-align: center;
 }
 
 .portfolio-overlay {
   background-color: rgba(0, 0, 0, 0.85);
-  padding: 25px 18px;
+  padding: 20px 14px;
   border-radius: 10px;
   display: inline-block;
   max-width: 900px;
@@ -345,7 +524,7 @@ body, html {
 }
 
 .portfolio-overlay h4 {
-  font-size: 18px;
+  font-size: 16px;
   color: #f7d000;
   font-weight: 300;
   margin-bottom: 5px;
@@ -467,13 +646,13 @@ body, html {
 .testimonial-section {
   background-color: #3e3e3e;
   color: white;
-  padding: 60px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
 .testimonial-content h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 16px;
+  margin-bottom: 0px;
   color: #dcdcdc;
   letter-spacing: 1px;
 }
@@ -484,7 +663,7 @@ body, html {
 }
 
 .testimonial-content p {
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.7;
   max-width: 800px;
   margin: 0 auto 20px;
@@ -497,62 +676,73 @@ body, html {
   color: #ccc;
 }
 
-/* Client Brand Section */
-.client-section {
-  background-color: white;
-  padding: 60px 20px;
-  text-align: center;
+.client-wrapper {
+  position: relative;
+  display: inline-block; 
+  text-align: left;
 }
 
-.client-title p {
-  font-size: 14px;
-  color: #888;
-  margin: 0;
-}
-
-.client-title h2 {
-  font-size: 30px;
-  margin-bottom: 30px;
-  color: #000;
+.client-title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.7); /* Optional: improves readability */
+  padding: 10px;
+  border-radius: 6px;
 }
 
 .client-logos img {
+  margin-top: 40px;
+  display: block;
   max-width: 100%;
   height: auto;
 }
 
-/* Top Contact CTA */
+
 .contact-top {
   background-color: #3e3e3e;
   color: white;
-  text-align: center;
-  padding: 40px 20px;
+  padding: 40px 0;
 }
 
-.contact-top h2 {
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  flex-wrap: wrap;
+}
+
+.contact-left h2 {
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.contact-top p {
+.contact-left p {
   font-size: 16px;
-  margin-bottom: 20px;
+  margin: 0;
+}
+
+.contact-right {
+  display: flex;
+  align-items: center;
 }
 
 .whatsapp-button {
-  display: inline-block;
   background-color: #fdd835;
   color: #1c1c1c;
-  padding: 10px 20px;
+  padding: 12px 24px;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 4px;
-  position: relative;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.whatsapp-button::before {
-  content: "📞 ";
-  margin-right: 6px;
+.wa-icon {
+  width: 20px;
+  height: 20px;
 }
 
 /* Footer Section */
